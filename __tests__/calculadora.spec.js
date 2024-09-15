@@ -66,3 +66,20 @@ test('dividir 7 / 2', () => {
     expect(resultadoObtido).toBe(resultadoEsperado)
 
 }) // final do dividir 7 / 2
+
+test('dividir por zero', () => {
+    // Configura
+    const num1 = 7
+    const num2 = 0
+    const resultadoEsperado = Infinity
+
+    // Executar
+    const resultadoObtido = calculadora.dividirDoisNumeros(num1, num2)
+
+    // Valida
+    expect(resultadoObtido).toBe(resultadoEsperado)
+    if (resultadoObtido == Infinity){
+        console.log('Não é possível dividir por zero')
+    }
+
+}) // final do dividir por zero
