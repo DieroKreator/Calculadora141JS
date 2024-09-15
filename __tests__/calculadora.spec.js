@@ -52,3 +52,17 @@ test('multiplicar 3 * 6', () => {
     expect(resultadoObtido).toBe(resultadoEsperado)
 
 }) // final do multiplicar 3 * 6
+
+test('dividir 7 / 2', () => {
+    // Configura
+    const num1 = 7
+    const num2 = 2
+    const resultadoEsperado = 3.5
+
+    // Executar
+    const resultadoObtido = calculadora.dividirDoisNumeros(num1, num2)
+
+    // Valida
+    expect(resultadoObtido).toBe(resultadoEsperado)
+
+}) // final do dividir 7 / 2
