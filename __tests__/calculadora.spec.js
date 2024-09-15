@@ -83,3 +83,27 @@ test('dividir por zero', () => {
     }
 
 }) // final do dividir por zero
+
+// DDT
+// Data Driven Testing
+// Teste Direcionado por Dados
+let massaDivisao = [
+    [7, 2, 3.5],
+    [7, 0, Infinity],
+    [4, 0.25, 16]
+]
+
+test.each(massaDivisao)('dividir %f / %f', (num1, num2, resultadoEsperado) => {
+    // Configura
+    // Vem da lista acima (massaDivisão)
+
+    // Executar
+    const resultadoObtido = calculadora.dividirDoisNumeros(num1, num2)
+
+    // Valida
+    expect(resultadoObtido).toBe(resultadoEsperado)
+    if (resultadoObtido == Infinity){
+        console.log('Não é possível dividir por zero')
+    }
+
+})
